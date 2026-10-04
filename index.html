@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudio Lúmina · Portafolio de Fotografía</title>
+  <meta name="description" content="Portafolio de fotografía profesional. Retratos, paisajes y eventos capturados con sensibilidad y detalle.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== ENCABEZADO / MENÚ ===== -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#inicio" class="logo">Estudio&nbsp;<span>Lúmina</span></a>
+      <nav class="nav" id="nav">
+        <a href="#inicio" class="nav-link">Inicio</a>
+        <a href="#galeria" class="nav-link">Galería</a>
+        <a href="#testimonios" class="nav-link">Testimonios</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+<!-- ===== INICIO / HERO ===== -->
+<section class="hero" id="inicio">
+  
+  
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="91-135735330_medium.mp4" type="video/mp4">
+  </video>
+
+  
+  <div class="hero-overlay"></div>
+  <div class="container hero-content">
+    <p class="hero-sub">Fotografía profesional</p>
+    <h1 class="hero-title">Capturo historias<br>que perduran</h1>
+    <p class="hero-text">Retratos, paisajes y eventos con una mirada artística y cuidado en cada detalle.</p>
+    <a href="#galeria" class="btn btn-primary">Ver mi trabajo</a>
+  </div>
+  <a href="#galeria" class="hero-scroll" aria-label="Bajar">↓</a>
+</section>
+
+  <!-- ===== GALERÍA ===== -->
+  <section class="section" id="galeria">
+    <div class="container">
+      <p class="section-sub">Portafolio</p>
+      <h2 class="section-title">Galería de trabajos</h2>
+
+      <div class="filtros" id="filtros">
+        <button class="filtro activo" data-cat="todos">Todos</button>
+        <button class="filtro" data-cat="retratos">Retratos</button>
+        <button class="filtro" data-cat="paisajes">Paisajes</button>
+        <button class="filtro" data-cat="eventos">Eventos</button>
+      </div>
+
+      <div class="galeria" id="galeria"><!-- Las fotos se cargan desde script.js --></div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIOS ===== -->
+  <section class="section section-alt" id="testimonios">
+    <div class="container">
+      <p class="section-sub">Clientes</p>
+      <h2 class="section-title">Lo que dicen de mí</h2>
+      <div class="testimonios" id="testimonios-grid"><!-- Se cargan desde script.js --></div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACTO ===== -->
+  <section class="section" id="contacto">
+    <div class="container contacto-inner">
+      <div class="contacto-info">
+        <p class="section-sub">Hablemos</p>
+        <h2 class="section-title">¿Trabajamos juntos?</h2>
+        <p class="contacto-text">Cuéntame sobre tu proyecto y te responderé lo antes posible.</p>
+        <ul class="contacto-datos">
+          <li>✉ hola@estudiolumina.com</li>
+          <li>☎ +58 000 000 0000</li>
+          <li>◉ Caracas, Venezuela</li>
+        </ul>
+      </div>
+
+      <form class="form" id="form" action="https://formspree.io/f/mbglnebz" method="POST">
+      <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </div>
+        <div class="campo">
+          <label for="email">Correo</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+        </div>
+        <!-- Trampa anti-spam (honeypot): el humano no la ve, el robot sí la llena -->
+        <input type="text" name="_gotcha" class="honeypot" tabindex="-1" autocomplete="off">
+        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+        <p class="form-estado" id="formEstado"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#inicio" class="logo">Estudio&nbsp;<span>Lúmina</span></a>
+      <div class="redes">
+        <a href="#" aria-label="Instagram">Instagram</a>
+        <a href="#" aria-label="Facebook">Facebook</a>
+        <a href="#" aria-label="Behance">Behance</a>
+      </div>
+      <p class="copy">© 2026 Estudio Lúmina. Diseñado por Henry Bellorin.</p>
+    </div>
+  </footer>
+
+  <!-- ===== VISOR DE IMAGEN (LIGHTBOX) ===== -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-cerrar" id="lbCerrar">&times;</span>
+    <span class="lightbox-flecha lb-prev" id="lbPrev">&#10094;</span>
+    <img src="" alt="" class="lightbox-img" id="lbImg">
+    <span class="lightbox-flecha lb-next" id="lbNext">&#10095;</span>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

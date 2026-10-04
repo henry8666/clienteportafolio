@@ -1,0 +1,12 @@
+====================================================
+  PORTAFOLIO DE FOTOGRAFÍA · Guía rápida de uso
+  Hecho por Henry Bellorin
+====================================================
+
+Qué hay en la carpeta:
+  - index.html  -> la página (estructura)
+  - style.css   -> los colores y el diseño
+  - script.js   -> las fotos, testimonios y el formulario
+
+
+
